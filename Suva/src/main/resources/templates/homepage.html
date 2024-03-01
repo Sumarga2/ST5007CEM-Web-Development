@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <title>The Suva Hotel</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<!--  <link rel="shortcut icon" type="x-icon" th:href="@{/images/Logo.png}">-->
+  <link rel="stylesheet" th:href="@{~/css/footerStyle.css}">
+  <link rel="stylesheet" th:href="@{~/css/home_navigationStyle.css}">
+  <link rel="stylesheet" th:href="@{~/css/HomepageStyle.css}">
+  <link rel="stylesheet" th:href="@{~/css/checkOffer.css}">
+
+  <style>
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+    }
+
+    #btn {
+      width: 150px;
+      height: 39px;
+      margin-top: 15px;
+      background: #46c3d0;
+      color: #0a0a0a;
+      border-radius: 9px;
+      font-weight: bold;
+      border: none;
+      transition: 0.5s ease;
+      cursor: pointer;
+    }
+
+    #btn:hover {
+      background: #4cb29a;
+      color: white;
+    }
+  </style>
+  <script>
+    const popup = document.querySelector('.popup');
+    const close = document.querySelector('.close');
+    window.onload = function () {
+      setTimeout(function () {
+        popup.style.display = "block"
+      }, 5000)
+    }
+    close.addEventListener('click', () => {
+      popup.style.display = "none";
+    })
+  </script>
+</head>
+
+<body>
+<section>
+  <div th:replace="fragments/Navi_frag.html :: navigator"></div>
+
+  <section>
+    <!-- image -->
+    <div class="image">
+      <div class="cover">
+        <h3>The Suva Hotel</h3>
+        <h5>"Your Home Away from Home: Where Luxury Meets Comfort"</h5>
+        <div class="center">
+          <a th:href="@{~/user/booking}"><button id="btn">Book now</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="shortdetails">
+      <div class="about">
+        <h1>About us</h1>
+        <p>Welcome to Suva, we believe in inspiring the world through hospitality. Our commitment to providing exceptional experiences goes beyond comfortable rooms and exquisite amenities. It's about creating lasting memories for our guests, making every stay a unique and unforgettable journey. We take pride in our dedicated team who understands that true hospitality is not just a service, but a heartfelt connection that transcends borders. We are on a mission to spread warmth, kindness, and the spirit of exploration to every corner of the globe, because we believe that when you inspire hospitality, you inspire the world..</p>
+      </div>
+      <div class="imageDetails">
+        <img th:src="@{~/images/ok/homepage_about.jpg}" alt="Image Not Available">
+      </div>
+
+      <div class="Roominformation">
+        <div class="heading">
+          <h1>Accommodation</h1>
+        </div>
+        <div class="accommodation">
+          <div class="rooms">
+            <img th:src="@{~/images/ok/single_bed.jpg}" alt="Image Not Available">
+            <h2>Single room</h2>
+            <p>
+              Discover comfort and affordability in our single rooms at our charming restaurant. The single room is designed to provide a cozy retreat for solo travelers, offering a perfect blend of functionality and style. Embrace a tranquil atmosphere that caters to your individual needs, ensuring a restful night's sleep after a day of exploration. </p>
+          </div>
+          <div class="rooms">
+            <img th:src="@{~/images/ok/couple_bed.jpg}" alt="Image Not Available">
+            <h2>Couple room</h2>
+            <p> Designed with intimacy in mind, our couple rooms offer a perfect blend of comfort and elegance. Immerse yourselves in a cozy ambiance, complete with soft furnishings and thoughtful details that set the stage for a memorable stay. Enjoy the luxury of a spacious and well-appointed room, providing the perfect setting for a romantic escape or a celebratory getaway.</p>
+          </div>
+          <div class="rooms">
+            <img th:src="@{~/images/ok/family_bed.jpg}" alt="Image Not Available">
+            <h2>Family room</h2>
+            <p>
+              Experience the joy of togetherness in our spacious family rooms at our welcoming restaurant. Designed with families in mind, our family rooms provide a comfortable and inclusive space for all members to unwind and create lasting memories. The well-appointed accommodations cater to the needs of both parents and children, ensuring a harmonious and enjoyable stay. Embrace the convenience of ample space, thoughtful amenities, and a warm atmosphere that fosters quality time together.</p>
+          </div>
+          <div class="rooms">
+            <img th:src="@{~/images/ok/suite_bed.jpg}" alt="">
+            <h2>Suite room</h2>
+            <p>The suite is a haven of sophistication, offering a spacious retreat that combines opulence with unparalleled comfort. Indulge in the lavish surroundings and thoughtful details that make your stay truly extraordinary. Our suite rooms are meticulously designed to cater to your every need, providing an atmosphere of exclusivity and indulgence. Immerse yourself in the epitome of hospitality, with a dedicated living space, plush furnishings, and upscale amenities that redefine luxury.</p>
+          </div>
+          <div class="rooms">
+            <img th:src="@{~/images/ok/honeymoon_bed.jpg}" alt="">
+            <h2>Honeymoon room</h2>
+            <p>
+              Embark on a romantic journey in our exclusive honeymoon room, where enchantment and luxury come together to create the perfect setting for your special moments. Our honeymoon room is designed to be a haven for love, offering an intimate escape for newlyweds to celebrate the beginning of their lifelong adventure.Step into a world of romance, where the room is adorned with elegant decor, creating an atmosphere of warmth and intimacy. The plush furnishings and soft lighting create a cocoon of comfort, providing the ideal backdrop for you and your loved one to unwind and create memories that last a lifetime.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="CheckGallery">
+        <div class="title">
+          <br>
+          <h1>Gallery</h1>
+        </div>
+        <div class="GalleryPic">
+          <img th:src="@{~/images/ok/image_1.jpg}" alt="">
+          <img th:src="@{~/images/ok/image_2.jpg}" alt="">
+          <img th:src="@{~/images/ok/image_3.jpg}" alt="">
+          <img th:src="@{~/images/ok/image_4.jpg}" alt="">
+          <img th:src="@{~/images/ok/image_5.jpg}" alt="">
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <div class="reviews">
+        <div class="comments">
+          <h1>Read our Customer Experience</h1>
+          <br>
+        </div>
+        <div class="mainmessage">
+          <div class="messages">
+            <div class="customerdetail">
+              <img th:src="@{~/images/ok/Sumit.jpg}" alt="">
+              <h3>Sumit</h3>
+            </div>
+            <p>"Hospitality, kindness, cleanliness and service
+              were there as expected. I can only advise you to
+              continue this way same if it would be nice
+              to offer some croissants and chocolates
+              at the breakfast… ".</p>
+          </div>
+          <div class="messages">
+            <div class="customerdetail">
+              <img th:src="@{~/images/ok/Bipin.jpg}" alt="">
+              <h3>Bipin</h3>
+            </div>
+            <p>"Homely friendly hotel
+              Only stayed 2 nights but the hotel has
+              standard rooms and very clean. All the
+              staff from reception to the restaurant were really
+              friendly. It is very central and within walking distance
+              of all local shops, cafes, and restaurants.
+              Kathmandu is a beautiful historic city with lots of
+              amazing architecture to view while walking to your destination."</p>
+
+          </div>
+          <div class="messages">
+            <div class="customerdetail">
+              <img th:src="@{~/images/ok/Yanish.jpg}" alt="">
+              <h3>Yanish</h3>
+            </div>
+            <p>"Nice jazz-evening in Hotel
+              Room was just for my needs for this
+              type of "staycation. Surprisingly fun jazz
+              evening with good tapas table and nice wines.
+              Hotels location is perfect, and breakfast
+              really okay with warm dishes and good coffee.
+              What else do you need?"</p>
+          </div>
+          <div class="messages">
+            <div class="customerdetail">
+              <img th:src="@{~/images/ok/rohan.jpg}" alt="">
+              <h3>Rohan</h3>
+            </div>
+            <p>"Excellent hotel. Great service
+              The room was very spacious, clean, and
+              had the amenities we needed.
+              Breakfast was delicious and with many choices; it
+              was a very wide buffet spread. The people at the
+              reception were very helpful, not just on check-in and checkout,
+              but also in giving directions to spots.</p>
+
+          </div>
+          <div class="messages">
+            <div class="customerdetail">
+              <img th:src="@{~/images/ok/Anjali.jpg}" alt="">
+              <h3>Anjali</h3>
+            </div>
+            <p>"Great central location
+              I stayed at Hotel Bachelors for a night,
+              really enjoyed its location in the city
+              center where everything is within walking distance.
+              The staff was very helpful, breakfast really
+              delicious, and the room nice. I appreciated the
+              luggage room option as well."</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="container-fluid contact" id="contact">
+    <div class="container">
+      <form th:method="post" th:action="@{/user/savefeedback}" th:object="${feedback}">
+        <h2>Guest Experience Feedback</h2>
+        <input type="email" placeholder="Email" class="full-half" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+               required th:field="*{email}" th:value="${feedback.email}">
+        <input type="text" placeholder="Name" class="full-half" required th:field="*{fullname}"
+               th:value="${feedback.fullname}">
+        <input type="text" placeholder="Subject" required th:field="*{subject}" th:value="${feedback.subject}">
+        <textarea placeholder="Message" required th:field="*{message}" th:value="${feedback.message}"></textarea>
+
+        <input type="submit" onclick="allert()" value="Send">
+      </form>
+    </div>
+  </div>
+
+  <div th:replace="fragments/Footer_frag.html :: footer"></div>
+</section>
+
+<script>
+  function allert() {
+    alert("Successfully Submitted")
+  }
+</script>
+
+<script th:inline="javascript">
+  /* Use Thymeleaf to add "active" class to the current navigation list item */
+  /* Define the active page, for example, "homepage" */
+  var myPage = "homepage";
+
+  /* Get all list-group-item elements */
+  var listGroupItem = document.getElementsByClassName("list-group-item");
+
+  /* Loop through the list items and remove "active" class from all */
+  for (var i = 0; i < listGroupItem.length; i++) {
+    listGroupItem[i].classList.remove("active");
+  }
+
+  /* Find the element with the ID matching the active page and add "active" class */
+  var activeID = document.getElementById(myPage);
+  if (activeID) {
+    activeID.classList.add("active");
+  }
+</script>
+</section>
+</body>
+
+</html>
